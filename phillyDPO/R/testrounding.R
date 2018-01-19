@@ -8,12 +8,12 @@
 
 
 install.packages("devtools")
-library("devtools")
+require("devtools")
 
 # install.packages("roxygen2")
 # library(roxygen2)
 
-library(stringr)
+require(stringr)
 
 
 setwd("D:/Git PhilaSD")
