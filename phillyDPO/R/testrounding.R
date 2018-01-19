@@ -11,7 +11,7 @@ install.packages("devtools")
 library("devtools")
 
 install.packages("roxygen2")
-libary(roxygen2)
+library(roxygen2)
 
 library(stringr)
 
