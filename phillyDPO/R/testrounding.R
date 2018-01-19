@@ -7,13 +7,13 @@
 
 
 
-install.packages("devtools")
-require("devtools")
+# install.packages("devtools")
+# require("devtools")
 
 # install.packages("roxygen2")
 # library(roxygen2)
 
-require(stringr)
+library(stringr)
 
 
 setwd("D:/Git PhilaSD")
