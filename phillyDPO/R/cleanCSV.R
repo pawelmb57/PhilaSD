@@ -11,8 +11,16 @@ setwd("D:/Git PhilaSD/phillyDPO/R")
 
 
 
-
-
+# load("datapackets_combined.Rda")
+#
+#
+# # df <- df %>% select(SCN.School.ID, `School.Computer.Network.(SCN).ID.on.Record`)
+#
+#
+# df <- data.frame(
+#     col1 = c("1","2","asdf")
+#     , col2 = c(NA, "asdf","123.123")
+# )
 
 
 cleanCSV_dpo <- function(x){
@@ -23,4 +31,5 @@ cleanCSV_dpo <- function(x){
     x$key_for_cleanCSV_dpo <- NULL
     x
 }
+
 
