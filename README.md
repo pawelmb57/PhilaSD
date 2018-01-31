@@ -10,6 +10,8 @@ PhilaSD is not available from CRAN.  The development version can be installed fr
 ```r
 install.packages("devtools")
 devtools::install_github("pawelmb57/PhilaSD/phillyDPO")
+
+library(phillyDPO)
 ```
 
 
