@@ -23,7 +23,6 @@ setwd("D:/Git PhilaSD")
 
 
 
-options(warn=-1)
 
 
 
