@@ -86,8 +86,6 @@ b <- data.frame(
 
 qa_dpo(a, b, "col_key")
 
-
-
  COLUMNS (One file has a column that the other does not) 
  To view these columns, find qa_dpo_cols 
  ############################################################################### 
@@ -101,7 +99,6 @@ qa_dpo(a, b, "col_key")
  40 ROW MISMATCHES: There are a total of 40 mismatching data elemetns between the two files 
 
 
-
 > head(qa_dpo_cols)
   x_columns     key y_columns column_check
 1   col_key col_key   col_key            0
@@ -110,7 +107,6 @@ qa_dpo(a, b, "col_key")
 4   onlyina onlyina      <NA>            1
 5      <NA> onlyinb   onlyinb            1
 
-
    col_key column_name   x_col x_val y_col y_val check
 41       1     onlyina onlyina   100 99999 99999     1
 42       2     onlyina onlyina   200 99999 99999     1
@@ -118,7 +114,6 @@ qa_dpo(a, b, "col_key")
 44       4     onlyina onlyina   400 99999 99999     1
 45       5     onlyina onlyina   500 99999 99999     1
 46       6     onlyina onlyina   600 99999 99999     1
-
 
 > head(qa_dpo_all)
   col_key column_name x_col x_val y_col y_val check
