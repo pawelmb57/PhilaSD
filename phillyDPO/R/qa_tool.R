@@ -1,13 +1,10 @@
 
 
 
-library(haven)
 library(tidyr)
 library(dplyr)
 
 setwd("D:/Git PhilaSD/phillyDPO/R")
-
-
 
 
 
@@ -65,45 +62,32 @@ qa_dpo <- function(x,y,k){
 
 
 
-    # cat(  "###############################################################################", "\n"
-    #     , "###############################################################################", "\n\n\n"
-    #     , "COLUMNS", "\n"
-    #     , "(One file has a column that the other does not)","\n"
-    #     , "###############################################################################", "\n\n"
-    #     ,  sum(qa_dpo_columns$column_check), "COLUMN MISMATCHES:", "There were", sum(qa_dpo_columns$column_check), "mismatches in columns", "\n\n"
-    #     # , "The columns are:", "\n", unique(qa_dpo_columns$key[qa_dpo_columns$column_check == 1]), "\n\n"
-    #     , "To view these columns, find qa_dpo_columns", "\n\n"
-    #
-    #
-    #     , "ROWS", "\n"
-    #     , "(After matching on the key, the files differ", "\n"
-    #     , "###############################################################################", "\n\n"
-    #     , sum(df$check), "VALUE MISMATCHES: There are a total of", sum(df$check), "mismatching data elemetns between the two files"
-    #     # , head(unique(df$column_name))
-    #     )
+    cat(  "###############################################################################", "\n"
+        , "###############################################################################", "\n\n\n"
+        , "COLUMNS"
+        , "(One file has a column that the other does not)","\n"
+        , "To view these columns, find qa_dpo_cols", "\n"
+        , "###############################################################################", "\n\n"
+        ,  sum(qa_dpo_columns$column_check), "COLUMN MISMATCHES:", "There were", sum(qa_dpo_columns$column_check), "mismatches in columns", "\n\n"
 
 
 
+        , "ROWS"
+        , "(After matching on the key, the files differ", "\n"
+        , "To view these columns, find qa_dpo_rows", "\n"
+        , "###############################################################################", "\n\n"
+        , sum(df$check), "ROW MISMATCHES: There are a total of", sum(df$check), "mismatching data elemetns between the two files", "\n\n"
+        )
 
-    # if(sum(qa_dpo_columns$column_check > 0)){
-    #     qa_dpo_columns[qa_dpo_columns$column_check == 1, ]
-    # }
 
 
 
 
 
     # qa_dpo_result <<- qa_dpo_list
-    qa_dpo_columns <<- qa_dpo_columns
+    qa_dpo_cols <<- qa_dpo_columns
     qa_dpo_all <<- df
-    qa_dpo_mismatches <<- df[df$check == 1, ]
-
-
-    df %>%
-        filter(check == 1) %>%
-        group_by(column_name) %>%
-        dplyr::summarise(Number_of_Mismatches = n())
-
+    qa_dpo_rows <<- df[df$check == 1, ]
 
 
 }
@@ -111,6 +95,27 @@ qa_dpo <- function(x,y,k){
 
 
 
+#
+#
+# a <- data.frame(
+#     col_key = seq(1:20)
+#     , cola = seq(1:20)*5
+#     , colb = LETTERS[1:20]
+#     , onlyina = seq(1:20)*100
+# )
+#
+#
+# b <- data.frame(
+#     col_key = seq(1:20)
+#     , cola = seq(1:20) * 5
+#     , colb = LETTERS[1:20]
+#     , onlyinb = seq(1:20)*100
+# )
+#
+#
+#
+#
+# qa_dpo(a, b, "col_key")
 
 
 
