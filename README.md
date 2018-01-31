@@ -85,6 +85,50 @@ b <- data.frame(
 )
 
 qa_dpo(a, b, "col_key")
+
+
+
+ COLUMNS (One file has a column that the other does not) 
+ To view these columns, find qa_dpo_cols 
+ ############################################################################### 
+
+ 2 COLUMN MISMATCHES: There were 2 mismatches in columns 
+
+ ROWS (After matching on the key, the files differ 
+ To view these columns, find qa_dpo_rows 
+ ############################################################################### 
+
+ 40 ROW MISMATCHES: There are a total of 40 mismatching data elemetns between the two files 
+
+
+
+> head(qa_dpo_cols)
+  x_columns     key y_columns column_check
+1   col_key col_key   col_key            0
+2      cola    cola      cola            0
+3      colb    colb      colb            0
+4   onlyina onlyina      <NA>            1
+5      <NA> onlyinb   onlyinb            1
+
+
+   col_key column_name   x_col x_val y_col y_val check
+41       1     onlyina onlyina   100 99999 99999     1
+42       2     onlyina onlyina   200 99999 99999     1
+43       3     onlyina onlyina   300 99999 99999     1
+44       4     onlyina onlyina   400 99999 99999     1
+45       5     onlyina onlyina   500 99999 99999     1
+46       6     onlyina onlyina   600 99999 99999     1
+
+
+> head(qa_dpo_all)
+  col_key column_name x_col x_val y_col y_val check
+1       1        cola  cola     5  cola     5     0
+2       2        cola  cola    10  cola    10     0
+3       3        cola  cola    15  cola    15     0
+4       4        cola  cola    20  cola    20     0
+5       5        cola  cola    25  cola    25     0
+6       6        cola  cola    30  cola    30     0
+
 ```
 
 
