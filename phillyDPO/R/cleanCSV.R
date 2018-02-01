@@ -4,9 +4,6 @@ library(plyr)
 library(dplyr)
 library(tidyr)
 
-setwd("D:/Git PhilaSD/phillyDPO/R")
-
-
 
 
 
@@ -24,12 +21,3 @@ cleanCSV_dpo <- function(x){
 }
 
 
-
-
-# df <- data.frame(
-#     col1 = c(1.49999999, 2.0000000123, "foo")
-#     , col2 = c(2.5, 123.456789, "bar")
-# )
-# df
-#
-# cleanCSV_dpo(df)

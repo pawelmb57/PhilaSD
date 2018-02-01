@@ -4,7 +4,6 @@
 library(tidyr)
 library(dplyr)
 
-setwd("D:/Git PhilaSD/phillyDPO/R")
 
 
 
@@ -34,7 +33,7 @@ qa_dpo <- function(x,y,k){
     x$x_col <- x$column_name
 
     y <- data.frame(lapply(y, as.character), stringsAsFactors = FALSE)
-    y = gather(y, column_name, y_val, -k)
+    y <- gather(y, column_name, y_val, -k)
     y[y == ""] <- NA
     y$y_col <- y$column_name
 
@@ -91,33 +90,5 @@ qa_dpo <- function(x,y,k){
 
 
 }
-
-
-
-
-#
-#
-# a <- data.frame(
-#     col_key = seq(1:20)
-#     , cola = seq(1:20)*5
-#     , colb = LETTERS[1:20]
-#     , onlyina = seq(1:20)*100
-# )
-#
-#
-# b <- data.frame(
-#     col_key = seq(1:20)
-#     , cola = seq(1:20) * 5
-#     , colb = LETTERS[1:20]
-#     , onlyinb = seq(1:20)*100
-# )
-#
-#
-#
-#
-# qa_dpo(a, b, "col_key")
-
-
-
 
 
