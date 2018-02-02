@@ -84,9 +84,9 @@ qa_dpo <- function(x,y,k){
 
 
     # qa_dpo_result <<- qa_dpo_list
-    qa_dpo_cols <<- qa_dpo_columns
-    qa_dpo_all <<- df
-    qa_dpo_rows <<- df[df$check == 1, ]
+    qa_cols <<- qa_dpo_columns
+    qa_all <<- df
+    qa_rows <<- df[df$check == 1, ]
 
 
 }
